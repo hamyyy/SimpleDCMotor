@@ -23,7 +23,8 @@ int DCDriver4PWM::init() {
     pinMode(pinA_l, OUTPUT);
     pinMode(pinB_h, OUTPUT);
     pinMode(pinB_l, OUTPUT);
-    params = _configure4PWM(pwm_frequency, pinA_h, pinA_l, pinB_h, pinB_l);
+    // params = _configure4PWM(pwm_frequency, pinA_h, pinA_l, pinB_h, pinB_l);
+    params = _configure6PWM(pwm_frequency. 0, pinA_h, pinA_l, pinB_h, pinB_l, A_PHASE_WH, A_PHASE_WL);
     initialized = (params!=SIMPLEFOC_DRIVER_INIT_FAILED);
     return params!=SIMPLEFOC_DRIVER_INIT_FAILED;
 };
